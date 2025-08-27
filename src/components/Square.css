@@ -1,0 +1,63 @@
+/* Square styling */
+.square {
+  background: #fff;
+  border: 2px solid #646cff;
+  float: left;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 80px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square:hover {
+  background: #f0f0f0;
+  border-color: #535bf2;
+  transform: scale(1.02);
+}
+
+.square:focus {
+  outline: none;
+  background: #e6f3ff;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.3);
+}
+
+.square:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.square.winning {
+  background: #4caf50;
+  color: white;
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive design for squares */
+@media (max-width: 768px) {
+  .square {
+    height: 60px;
+    width: 60px;
+    font-size: 1.5rem;
+  }
+}
