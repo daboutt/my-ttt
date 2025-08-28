@@ -1,7 +1,15 @@
 import Square from './Square';
 
-export const Board = () => {
-  const renderSquare = (i) => <Square key={i} value={i} />;
+export const Board = ({ squares, onPlay }) => {
+  const handleClick = (i) => {
+    debugger;
+    const value = 'x';
+    onPlay(value, i);
+  };
+
+  const renderSquare = (i) => (
+    <Square key={i} value={squares[i]} onSquareClick={() => handleClick(i)} />
+  );
 
   return (
     <div>

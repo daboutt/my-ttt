@@ -1,5 +1,6 @@
 /* Square styling */
 .square {
+  color: black;
   background: #fff;
   border: 2px solid #646cff;
   float: left;

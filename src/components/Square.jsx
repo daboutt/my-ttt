@@ -6,7 +6,7 @@ const Square = ({ value, onSquareClick, isWinning = false }) => {
       onClick={onSquareClick}
       aria-label={`Square ${value ? `containing ${value}` : 'empty'}`}
     >
-      {/* {value} */}
+      {value}
     </button>
   );
 };
