@@ -6,6 +6,7 @@ export const useGameState = () => {
   const [currentMove, setCurrentMove] = useState(0);
 
   const xIsNext = currentMove % 2 === 0;
+
   const handlePlay = (value, i) => {
     setCurrentMove((prev) => prev + 1);
     setSquares((prev) => {
@@ -14,7 +15,7 @@ export const useGameState = () => {
       return newSquares;
     });
   };
-
+  const resetGame = () => {
     setSquares(createEmptyBoard());
     setCurrentMove(0);
   };

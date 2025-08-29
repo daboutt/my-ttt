@@ -10,7 +10,7 @@ export const Board = ({ squares, onPlay, xIsNext }) => {
   };
 
   const { winner, winningLine } = calculateWinner(squares);
-
+  const isDraw = !winner && squares.every((square) => square);
   const renderSquare = (i) => (
     <Square
       key={i}
@@ -22,7 +22,7 @@ export const Board = ({ squares, onPlay, xIsNext }) => {
 
   return (
     <div>
-      <GameStatus xIsNext={xIsNext} winner={winner} />
+      <GameStatus xIsNext={xIsNext} winner={winner} isDraw={isDraw} />
       <div className='board' role='grid' aria-label='Tic tac toe board'>
         <div className='board-row' role='row'>
           {renderSquare(0)}
