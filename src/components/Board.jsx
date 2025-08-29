@@ -1,9 +1,9 @@
+import GameStatus from './GameStatus';
 import Square from './Square';
 
-export const Board = ({ squares, onPlay }) => {
+export const Board = ({ squares, onPlay, xIsNext }) => {
   const handleClick = (i) => {
-    debugger;
-    const value = 'x';
+    const value = xIsNext ? 'x' : 'o';
     onPlay(value, i);
   };
 
@@ -13,7 +13,7 @@ export const Board = ({ squares, onPlay }) => {
 
   return (
     <div>
-      Board
+      <GameStatus xIsNext={xIsNext} />
       <div className='board' role='grid' aria-label='Tic tac toe board'>
         <div className='board-row' role='row'>
           {renderSquare(0)}

@@ -4,12 +4,12 @@ import ResetButton from './components/ResetButton';
 import { useGameState } from './hooks/useGameState';
 
 function App() {
-  const { squares, resetGame, handlePlay } = useGameState();
+  const { squares, xIsNext, resetGame, handlePlay } = useGameState();
   return (
     <>
       <h1>Tic tac toe</h1>
 
-      <Board squares={squares} onPlay={handlePlay} />
+      <Board squares={squares} onPlay={handlePlay} xIsNext={xIsNext} />
       <ResetButton onReset={resetGame} />
     </>
   );
