@@ -5,7 +5,7 @@ import { calculateWinner } from '../utils/gameUtils';
 export const Board = ({ squares, onPlay, xIsNext }) => {
   const handleClick = (i) => {
     if (calculateWinner(squares).winner || squares[i]) return;
-    const value = xIsNext ? 'x' : 'o';
+    const value = xIsNext ? 'X' : 'O';
     onPlay(value, i);
   };
 
