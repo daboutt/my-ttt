@@ -15,8 +15,8 @@ export const useGameState = () => {
     });
   };
 
-  const resetGame = () => {
     setSquares(createEmptyBoard());
+    setCurrentMove(0);
   };
 
   return { squares, xIsNext, resetGame, handlePlay };
