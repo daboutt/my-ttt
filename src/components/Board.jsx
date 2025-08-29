@@ -1,7 +1,7 @@
 import GameStatus from './GameStatus';
 import Square from './Square';
 import { calculateWinner } from '../utils/gameUtils';
-
+import './Board.css';
 export const Board = ({ squares, onPlay, xIsNext }) => {
   const handleClick = (i) => {
     if (calculateWinner(squares).winner || squares[i]) return;
