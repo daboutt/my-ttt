@@ -18,5 +18,6 @@ export const useGameState = () => {
   const resetGame = () => {
     setSquares(createEmptyBoard());
   };
+
   return { squares, xIsNext, resetGame, handlePlay };
 };
