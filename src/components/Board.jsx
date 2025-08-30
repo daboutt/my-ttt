@@ -2,7 +2,7 @@ import GameStatus from './GameStatus';
 import Square from './Square';
 import { calculateWinner } from '../utils/gameUtils';
 
-export const Board = ({ squares, onPlay, xIsNext }) => {
+export const Board = ({ squares, onPlay, xIsNext, timeLeft }) => {
   const handleClick = (i) => {
     if (calculateWinner(squares).winner || squares[i]) return;
     const value = xIsNext ? 'X' : 'O';
@@ -22,7 +22,7 @@ export const Board = ({ squares, onPlay, xIsNext }) => {
 
   return (
     <div>
-      <GameStatus xIsNext={xIsNext} winner={winner} />
+      <GameStatus xIsNext={xIsNext} winner={winner} isDraw={squares.every(square => square !== null) && !winner} timeLeft={timeLeft} />
       <div className='board' role='grid' aria-label='Tic tac toe board'>
         <div className='board-row' role='row'>
           {renderSquare(0)}
