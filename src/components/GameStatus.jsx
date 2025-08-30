@@ -1,6 +1,6 @@
 import './GameStatus.css';
 
-const GameStatus = ({ winner, isDraw, xIsNext }) => {
+const GameStatus = ({ winner, isDraw, xIsNext, timeLeft }) => {
   let status;
   let statusClass = '';
 
@@ -17,7 +17,12 @@ const GameStatus = ({ winner, isDraw, xIsNext }) => {
 
   return (
     <div className={`status ${statusClass}`} role='status' aria-live='polite'>
-      {status}
+      <div className="status-text">{status}</div>
+      {!winner && !isDraw && (
+        <div className="timer">
+          ⏰ {timeLeft}s
+        </div>
+      )}
     </div>
   );
 };
