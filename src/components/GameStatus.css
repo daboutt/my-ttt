@@ -14,13 +14,13 @@
 }
 
 .status.next-player {
-  background: #f0f8ff;
-  color: #646cff;
-  border: 2px solid #646cff;
+  background: #e9d8a6;
+  color: #001219;
+  border: 2px solid #001219;
 }
 
 .status.winner {
-  background: #4caf50;
+  background: #26854c;
   color: white;
   border: 2px solid #45a049;
   animation: celebrate 0.6s ease-in-out;

@@ -1,17 +1,17 @@
 /* Square styling */
 .square {
   color: black;
-  background: #fff;
-  border: 2px solid #646cff;
+  background: #e9d8a6;
+  border: 2px solid #001219;
   float: left;
   font-size: 2rem;
   font-weight: bold;
-  height: 80px;
+  height: 60px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 80px;
+  width: 60px;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -20,8 +20,8 @@
 }
 
 .square:hover {
-  background: #f0f0f0;
-  border-color: #535bf2;
+  background: #e9d8a6;
+  border-color: #001219;
   transform: scale(1.02);
 }
 
@@ -37,7 +37,7 @@
 }
 
 .square.winning {
-  background: #4caf50;
+  background: #26854c;
   color: white;
   animation: pulse 0.5s ease-in-out;
 }
