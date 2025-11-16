@@ -5,13 +5,13 @@ const GameStatus = ({ winner, isDraw, xIsNext }) => {
   let statusClass = '';
 
   if (winner) {
-    status = `🎉 Winner: ${winner}`;
+    status = `Winner: ${winner}`;
     statusClass = 'winner';
   } else if (isDraw) {
-    status = "🤝 It's a draw!";
+    status = "It's a draw!";
     statusClass = 'draw';
   } else {
-    status = `Next player: ${xIsNext ? 'X' : 'O'}`;
+    status = `Current player: ${xIsNext ? 'X' : 'O'}`;
     statusClass = 'next-player';
   }
 

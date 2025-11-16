@@ -12,6 +12,7 @@ export const Board = ({ squares, onPlay, xIsNext }) => {
 
   const { winner, winningLine } = calculateWinner(squares);
   const isDraw = !winner && squares.every((square) => square);
+
   const renderSquare = (i) => (
     <Square
       key={i}

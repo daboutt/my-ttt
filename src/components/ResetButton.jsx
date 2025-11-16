@@ -8,7 +8,7 @@ const ResetButton = ({ onReset, disabled = false }) => {
       disabled={disabled}
       aria-label='Reset game to start over'
     >
-      🔄 Reset Game
+      Reset Game
     </button>
   );
 };

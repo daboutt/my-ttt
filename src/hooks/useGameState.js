@@ -20,5 +20,5 @@ export const useGameState = () => {
     setCurrentMove(0);
   };
 
-  return { squares, xIsNext, resetGame, handlePlay };
+  return { squares, xIsNext, currentMove, resetGame, handlePlay };
 };

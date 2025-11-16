@@ -1,8 +1,8 @@
 /* Square styling */
 .square {
-  color: black;
-  background: #e9d8a6;
-  border: 2px solid #001219;
+  color: #434a42;
+  background: #e0dfd5;
+  border: 2px solid #434a42;
   float: left;
   font-size: 2rem;
   font-weight: bold;
@@ -20,8 +20,8 @@
 }
 
 .square:hover {
-  background: #e9d8a6;
-  border-color: #001219;
+  background: #e0dfd5;
+  border-color: #434a42;
   transform: scale(1.02);
 }
 
